@@ -28,7 +28,9 @@ def blogsHome(request):
 						'content':'First Post',
 					},
 				]'''
+	
 	posts=Posts.objects.all()
+
 	'''user=User.objects.filter(id=2).first()
 				#posts=Posts.objects.filter(author_id=1)
 				
@@ -51,4 +53,12 @@ def login(request):
 def signup(request):
 	template='blogs/signup.html'
 	context={'page_title': 'Sign Up'}
+	return render(request, template, context)
+
+def blogpage(request, id):
+	template='blogs/blogpage.html'
+	
+	post= Posts.objects.get(id= id)
+
+	context={'post': post, 'page_title': post.title}
 	return render(request, template, context)
