@@ -45,16 +45,6 @@ def about(request):
 	context={'page_title': 'About Us'}
 	return render(request, template, context)
 
-def login(request):
-	template='blogs/login.html'
-	context={'page_title': "Login"}
-	return render(request, template, context)
-
-def signup(request):
-	template='blogs/signup.html'
-	context={'page_title': 'Sign Up'}
-	return render(request, template, context)
-
 def blogpage(request, id):
 	template='blogs/blogpage.html'
 	
@@ -62,3 +52,14 @@ def blogpage(request, id):
 
 	context={'post': post, 'page_title': post.title}
 	return render(request, template, context)
+
+'''def login(request):
+	template='blogs/login.html'
+	context={'page_title': "Login"}
+	return render(request, template, context)
+
+def signup(request):
+	template='blogs/signup.html'
+	context={'page_title': 'Sign Up'}
+	return render(request, template, context)'''
+

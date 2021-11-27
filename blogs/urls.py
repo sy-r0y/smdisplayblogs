@@ -9,8 +9,8 @@ urlpatterns = [
 	path('', views.blogsHome, name='blogs-home'),
 	path('blogs/', views.blogsHome, name='blogs-home'),
 	path('about/', views.about, name='blogs-about'),
-	path('login/', views.login, name='login'),
-	path('signup/', views.signup, name='signup'),
+	#path('login/', views.login, name='login'),
+	#path('signup/', views.signup, name='signup'),
 	path('blogpage/<int:id>', views.blogpage, name='blog-page'),
 
 
