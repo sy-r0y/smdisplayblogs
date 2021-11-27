@@ -47,7 +47,16 @@
 	<main role="main" class="container">
 	  <div class="row">
 	    <div class="col-md-8">
-	      {% block body %}{% endblock body %}
+	      {% if messages %}
+	      	{% for message in messages %}
+	      		<div class="alert alert-{{message.tags}}">{{message}}</div>
+	      		<br>
+	      	{% endfor %}
+	      {% endif%}
+
+	      {% block body %}	
+
+	      {% endblock body %}
 	    </div>
 	    <div class="col-md-4">
 	      <div class="content-section">
